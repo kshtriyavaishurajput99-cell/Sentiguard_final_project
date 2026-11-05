@@ -1,0 +1,158 @@
+================================================================================
+SUICIDAL IDEATION DETECTION FRAMEWORK ON SOCIAL MEDIA
+DATASET CLEANING & NLP PREPROCESSING AUDIT REPORT
+Generated At: 2026-10-28 19:37:31
+================================================================================
+
+1. FILE INTEGRITY & PRESERVATION VERIFICATION
+--------------------------------------------------------------------------------
+Raw Input File:       C:\Users\hp\OneDrive\Documents\SuicidalIdeationDetection\dataset.csv
+Raw File Size:        186,736,272 bytes (178.09 MB)
+Original Preservation: VERIFIED (File was accessed strictly read-only and remains identical)
+Cleaned Output:       C:\Users\hp\OneDrive\Documents\SuicidalIdeationDetection\cleaned_dataset.csv (154.82 MB)
+Preprocessed Output:  C:\Users\hp\OneDrive\Documents\SuicidalIdeationDetection\preprocessed_dataset.csv (319.51 MB)
+Empirical Benchmark:  ~339 MB peak RAM (measured during standalone chunked text buffering)
+Total Processing Time:76.62 seconds
+
+2. ROW-COUNT ACCOUNTING & RECONCILIATION
+--------------------------------------------------------------------------------
+Total Raw Rows Parsed in dataset.csv:             233,337 (100.000%)
+
+Mutually Exclusive Exclusions:
+  - Missing Class Labels (NaN / blank):           1,250 (0.536%)
+  - Malformed Shifted Text in Class Column:       42 (0.018%)
+  - Empty Text with Valid Class:                  2 (0.000%)
+  - Same-Class Redundant Duplicate Records:       87 (0.037%)
+  - Conflicting-Class Duplicate Texts:            5 (0.002%)
+
+Total Excluded Records:                           1,386 (0.594%)
+Final Cleaned & Preprocessed Records:             231,951 (99.406%)
+Reconciliation Formula:                           233,337 - 1,386 = 231,951 [VERIFIED]
+
+3. AUDIT VERIFICATION BENCHMARKS
+--------------------------------------------------------------------------------
+  - Raw Row Count Check:          233,337 == 233,337 [PASS]
+  - Structural Corrupt Check: 1294 != 1292 [WARN]
+  - Same-Class Dupe Check: 87 != 1 [WARN]
+  - Conflicting Duplicate Check:  5 == 5 [PASS]
+  - Final Cleaned Check: 231951 != 232039 [WARN]
+
+4. DUPLICATE & CONFLICT ANALYSIS (COLLISION-SAFE)
+--------------------------------------------------------------------------------
+A. Same-Class Duplicate Analysis:
+   Total duplicate groups: 75
+   1. Text length: 250 chars | Total copies: 3 | Kept: 1, Dropped: 2 | Class: 'non-suicide'
+   2. Text length: 185 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'non-suicide'
+   3. Text length: 351 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'suicide'
+   4. Text length: 318 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'non-suicide'
+   5. Text length: 156 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'non-suicide'
+   6. Text length: 1532 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'non-suicide'
+   7. Text length: 197 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'non-suicide'
+   8. Text length: 267 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'non-suicide'
+   9. Text length: 244 chars | Total copies: 3 | Kept: 1, Dropped: 2 | Class: 'non-suicide'
+   10. Text length: 229 chars | Total copies: 5 | Kept: 1, Dropped: 4 | Class: 'non-suicide'
+   11. Text length: 101 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'non-suicide'
+   12. Text length: 16 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'non-suicide'
+   13. Text length: 150 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'non-suicide'
+   14. Text length: 557 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'non-suicide'
+   15. Text length: 91 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'non-suicide'
+   16. Text length: 254 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'non-suicide'
+   17. Text length: 157 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'non-suicide'
+   18. Text length: 644 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'non-suicide'
+   19. Text length: 5008 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'non-suicide'
+   20. Text length: 323 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'non-suicide'
+   21. Text length: 1357 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'non-suicide'
+   22. Text length: 155 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'non-suicide'
+   23. Text length: 5008 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'non-suicide'
+   24. Text length: 33 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'non-suicide'
+   25. Text length: 837 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'non-suicide'
+   26. Text length: 186 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'non-suicide'
+   27. Text length: 446 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'non-suicide'
+   28. Text length: 227 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'non-suicide'
+   29. Text length: 1330 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'non-suicide'
+   30. Text length: 244 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'non-suicide'
+   31. Text length: 276 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'non-suicide'
+   32. Text length: 240 chars | Total copies: 4 | Kept: 1, Dropped: 3 | Class: 'non-suicide'
+   33. Text length: 345 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'non-suicide'
+   34. Text length: 424 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'non-suicide'
+   35. Text length: 469 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'non-suicide'
+   36. Text length: 2087 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'suicide'
+   37. Text length: 238 chars | Total copies: 5 | Kept: 1, Dropped: 4 | Class: 'non-suicide'
+   38. Text length: 414 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'non-suicide'
+   39. Text length: 376 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'non-suicide'
+   40. Text length: 876 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'non-suicide'
+   41. Text length: 370 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'non-suicide'
+   42. Text length: 126 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'non-suicide'
+   43. Text length: 20 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'non-suicide'
+   44. Text length: 24 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'non-suicide'
+   45. Text length: 70 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'non-suicide'
+   46. Text length: 194 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'non-suicide'
+   47. Text length: 1005 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'suicide'
+   48. Text length: 505 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'non-suicide'
+   49. Text length: 58 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'non-suicide'
+   50. Text length: 448 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'non-suicide'
+   51. Text length: 694 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'suicide'
+   52. Text length: 5002 chars | Total copies: 3 | Kept: 1, Dropped: 2 | Class: 'non-suicide'
+   53. Text length: 124 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'non-suicide'
+   54. Text length: 595 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'non-suicide'
+   55. Text length: 251 chars | Total copies: 3 | Kept: 1, Dropped: 2 | Class: 'non-suicide'
+   56. Text length: 52 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'non-suicide'
+   57. Text length: 243 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'non-suicide'
+   58. Text length: 389 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'non-suicide'
+   59. Text length: 1353 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'non-suicide'
+   60. Text length: 260 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'non-suicide'
+   61. Text length: 78 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'non-suicide'
+   62. Text length: 1722 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'non-suicide'
+   63. Text length: 144 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'non-suicide'
+   64. Text length: 895 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'non-suicide'
+   65. Text length: 183 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'non-suicide'
+   66. Text length: 86 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'non-suicide'
+   67. Text length: 115 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'non-suicide'
+   68. Text length: 87 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'non-suicide'
+   69. Text length: 422 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'non-suicide'
+   70. Text length: 270 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'non-suicide'
+   71. Text length: 2478 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'suicide'
+   72. Text length: 19 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'non-suicide'
+   73. Text length: 242 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'non-suicide'
+   74. Text length: 1033 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'non-suicide'
+   75. Text length: 293 chars | Total copies: 2 | Kept: 1, Dropped: 1 | Class: 'non-suicide'
+   Resolution Policy: Preserved first instance; dropped redundant duplicate copies.
+
+B. Conflicting-Class Duplicate Analysis:
+   Total conflicting groups: 1
+   1. Text length: 6 chars | Total copies: 5 | Action: DROPPED ALL | Classes found: ['non-suicide', 'suicide']
+   Resolution Policy: Dropped ALL occurrences without majority voting.
+   Justification: Contradictory ground-truth labels for identical text induce high-variance
+   gradients in machine learning classifiers and corrupt Genetic Algorithm chromosome evaluation.
+
+5. CLASS DISTRIBUTION (BEFORE VS. AFTER CLEANING)
+--------------------------------------------------------------------------------
+Class Label     | Raw Candidate   | Final Cleaned   | Final Percentage
+--------------- | --------------- | --------------- | ---------------
+suicide         | 116,033         | 116,025         | 50.021%
+non-suicide     | 116,012         | 115,926         | 49.979%
+--------------- | --------------- | --------------- | ---------------
+TOTAL           | 232,043         | 231,951         | 100.000%
+
+6. COLUMN SCHEMAS OF DELIVERABLES
+--------------------------------------------------------------------------------
+File: cleaned_dataset.csv (Exactly 2 columns)
+  1. 'text'  : Cleaned human-readable text (HTML decoded, URLs removed, whitespace normalized)
+  2. 'class' : Original target category ('suicide' or 'non-suicide')
+
+File: preprocessed_dataset.csv (Exactly 5 columns)
+  1. 'text'            : Cleaned original text (from cleaned_dataset.csv)
+  2. 'class'           : Original target category ('suicide' or 'non-suicide')
+  3. 'label'           : Numerical target label (1 for 'suicide', 0 for 'non-suicide')
+  4. 'lemmatized_text' : Lowercased, negation-preserved stopword-filtered, WordNet-lemmatized string
+  5. 'stemmed_text'    : Lowercased, negation-preserved stopword-filtered, Porter-stemmed string
+
+7. NLP PREPROCESSING METHODOLOGY
+--------------------------------------------------------------------------------
+- Negation Preservation: Active.
+  Words such as 'not', 'no', 'never', 'cannot', 'against', and negative contraction stems
+  were protected from removal to prevent inverting emotional and ideation sentiment.
+- Lemmatization: WordNetLemmatizer applied to filtered word tokens (Primary GA feature).
+- Stemming: PorterStemmer applied to filtered word tokens independently.
+- Architectural Rule: Stemming was NEVER applied to already-lemmatized tokens.
+================================================================================
