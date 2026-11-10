@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SentiGuard - Your Words Matter</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+html{scroll-behavior:smooth}
+body{background:#070b1a;color:white;overflow-x:hidden}
+#welcome{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px 20px;background:radial-gradient(circle at 20% 20%, #4c1d95 0%, transparent 40%),radial-gradient(circle at 80% 80%, #0e7490 0%, transparent 40%),linear-gradient(180deg,#070b1a,#120b2e)}
+.badge-top{background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);padding:8px 18px;border-radius:30px;font-size:13px;letter-spacing:1px}
+#welcome h1{font-size:82px;font-weight:800;line-height:1;margin:18px 0 5px;background:linear-gradient(90deg,#22d3ee,#a78bfa,#f472b6,#facc15);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+#welcome h2{font-size:26px;font-weight:400;color:#e2e8f0}
+.thought-box{margin:28px 0;max-width:720px;background:rgba(255,255,255,0.08);border-left:4px solid #facc15;border-radius:15px;padding:20px}
+.thought-box .quote{font-family:'Playfair Display',serif;font-style:italic;font-size:22px;line-height:1.5;color:#fff}
+.thought-box .sub{font-size:14px;color:#cbd5e1;margin-top:10px}
+#welcome p.desc{max-width:650px;color:#cbd5e1;font-size:16px;line-height:1.6}
+.scroll-btn{margin-top:30px;padding:16px 38px;font-size:18px;font-weight:600;border:none;border-radius:50px;background:white;color:#4c1d95;cursor:pointer;box-shadow:0 15px 40px rgba(167,139,250,0.5)}
+.scroll-btn:hover{transform:scale(1.05)}
+.scroll-hint{margin-top:18px;font-size:13px;opacity:0.7;animation:bounce 1.5s infinite}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}
+.features{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:28px}
+.features span{background:rgba(255,255,255,0.1);padding:9px 16px;border-radius:25px;font-size:13px;border:1px solid rgba(255,255,255,0.15)}
+#analyzer{padding:50px 15px 40px;max-width:950px;margin:auto}
+.section-title{text-align:center;margin-bottom:8px;font-size:34px}
+.section-sub{text-align:center;color:#94a3b8;margin-bottom:30px}
+.card{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.15);border-radius:22px;padding:26px;margin-bottom:22px}
+.card h2{margin-bottom:12px}
+textarea{width:100%;height:115px;border-radius:14px;padding:14px;font-size:16px;border:none;outline:none;color:#0f172a}
+.example-btns button{margin:5px 5px 0 0;padding:9px 14px;border-radius:20px;border:none;cursor:pointer;background:#e0e7ff;font-weight:600}
+.btn{padding:13px 24px;border:none;border-radius:12px;font-weight:700;cursor:pointer;margin-top:12px;font-size:16px}
+.btn-blue{background:linear-gradient(90deg,#3b82f6,#8b5cf6);color:white}
+.btn-green{background:linear-gradient(90deg,#22c55e,#0ea5e9);color:white}
+input[type=file]{margin-top:12px}
+#result{margin-top:16px;padding:16px;border-radius:14px;display:none;font-size:18px;font-weight:700;text-align:center}
+table{width:100%;border-collapse:collapse;margin-top:16px;background:white;color:black;border-radius:12px;overflow:hidden}
+th,td{padding:11px;text-align:left;border-bottom:1px solid #eee;font-size:14px}
+.help-box{text-align:center;background:linear-gradient(90deg,#fef3c7,#fde68a);color:#92400e;padding:22px;border-radius:20px}
+@media(max-width:600px){#welcome h1{font-size:52px}#welcome h2{font-size:20px}.thought-box .quote{font-size:18px}}
+</style>
+</head>
+<body>
+<div id="welcome">
+  <div class="badge-top">✨ AI FOR EMOTIONAL WELL-BEING ✨</div>
+  <div style="font-size:60px;margin-top:15px">🛡️</div>
+  <h1>SentiGuard</h1>
+  <h2>Your Words Matter. Your Feelings Matter.</h2>
+  <div class="thought-box">
+    <div class="quote">"You don't have to hold it all in. Sometimes, just putting your feelings into words is the first step towards healing."</div>
+    <div class="sub">— SentiGuard listens without judging you. Just be honest, we are here for you. ❤️</div>
+  </div>
+  <p class="desc">SentiGuard tumhare likhe hue text, diary, notes ya file ko padh ke batata hai - tum khush ho, udaas ho, ya tumhe support ki zaroorat hai. Aur wo bhi sirf 2 second me.</p>
+  <a href="#analyzer"><button class="scroll-btn">Start Analyzing My Feelings ↓</button></a>
+  <div class="scroll-hint">↓ Scroll down to begin ↓</div>
+  <div class="features">
+    <span>📝 Text Prediction</span>
+    <span>📄 .txt File</span>
+    <span>📊 .csv File</span>
+    <span>📈 5 Graphs</span>
+    <span>💛 Safe & Private</span>
+  </div>
+  <p style="font-size:12px;margin-top:22px;opacity:0.6">If you ever feel hopeless, please talk to someone you trust. You are not alone.</p>
+</div>
+
+<div id="analyzer">
+  <h1 class="section-title">🔍 Let's Check How You Feel</h1>
+  <p class="section-sub">Type something, or upload your .txt / .csv file - we will analyze everything together.</p>
+  <div class="card">
+    <h2>1. ✍️ Type Your Text</h2>
+    <textarea id="textInput" placeholder="Type here... e.g. I am feeling very happy today, but a little tired"></textarea>
+    <div class="example-btns">
+      <button onclick="setText('I love this product, it is amazing!')">Try: Happy 😊</button>
+      <button onclick="setText('I feel sad and alone today, nobody understands me')">Try: Sad 😔</button>
+      <button onclick="setText('Today is a normal day, nothing special')">Try: Neutral 😐</button>
+    </div>
+    <br><button class="btn btn-blue" onclick="predictText()">Analyze My Text →</button>
+    <div id="result"></div>
+  </div>
+  <div class="card">
+    <h2>2. 📁 Upload .txt or .csv File</h2>
+    <p style="font-size:14px;color:#cbd5e1">Agar tumhare paas 100 comments wali .csv file hai, toh usko daalo. Hum har line ko check karke table + 5 graph bana denge.</p>
+    <p style="font-size:13px;color:#facc15;margin-top:8px">.csv me pehla column text hona chahiye. .txt me har line ek alag text hogi.</p>
+    <input type="file" id="fileInput" accept=".txt,.csv">
+    <br><button class="btn btn-green" onclick="uploadFile()">Upload & Analyze File 📊</button>
+    <div id="fileResult"></div>
+    <div id="graphArea" style="text-align:center;margin-top:15px"></div>
+  </div>
+  <div class="help-box">
+    <b>💛 A Thought For You</b><br>
+    "Healing is not about forgetting. It's about learning to live with what happened, with a little more kindness towards yourself."
+    <br><br>Need help? Talk to a friend, family member or counsellor. Asking for help is brave.
+  </div>
+  <p style="text-align:center;margin-top:20px;opacity:0.6;font-size:13px">Made with ❤️ by SentiGuard Team</p>
+</div>
+
+<script>
+function setText(t){ document.getElementById('textInput').value=t; }
+async function predictText(){
+  let text = document.getElementById('textInput').value;
+  let form = new FormData(); form.append('text', text);
+  let res = await fetch('/predict',{method:'POST',body:form});
+  let data = await res.json();
+  let div = document.getElementById('result');
+  div.style.display='block';
+  if(data.error){ div.innerHTML=data.error; return; }
+  let color = data.prediction=='Positive' ? '#22c55e' : data.prediction=='Negative' ? '#ef4444' : '#f59e0b';
+  div.style.background=color;
+  div.innerHTML = `Result: ${data.prediction} | Confidence: ${data.confidence}%` + (data.risk ? `<br>⚠️ High Risk Detected - Please talk to someone immediately, you are not alone.` : '');
+}
+async function uploadFile(){
+  let file = document.getElementById('fileInput').files[0];
+  if(!file){ alert('Pehle file select karo'); return; }
+  let form = new FormData(); form.append('file', file);
+  let res = await fetch('/upload',{method:'POST',body:form});
+  let data = await res.json();
+  let div = document.getElementById('fileResult');
+  if(data.error){ div.innerHTML=data.error; return; }
+  let html = `<p style="margin-top:10px"><b>Total:</b> ${data.total} | Positive: ${data.positive} | Negative: ${data.negative} | Neutral: ${data.neutral}</p><table><tr><th>Text</th><th>Prediction</th><th>Confidence</th></tr>`;
+  data.results.forEach(r=>{ html+=`<tr><td>${r.text}</td><td>${r.prediction}</td><td>${r.confidence}%</td></tr>`; });
+  html+='</table>';
+  div.innerHTML=html;
+  let g = data.graphs;
+  document.getElementById('graphArea').innerHTML = `
+    <h3 style="margin:20px 0">📊 5 Different Graphs</h3>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:15px">
+      <div style="background:white;padding:10px;border-radius:12px"><img src="data:image/png;base64,${g.bar}" style="width:100%"></div>
+      <div style="background:white;padding:10px;border-radius:12px"><img src="data:image/png;base64,${g.pie}" style="width:100%"></div>
+      <div style="background:white;padding:10px;border-radius:12px"><img src="data:image/png;base64,${g.donut}" style="width:100%"></div>
+      <div style="background:white;padding:10px;border-radius:12px"><img src="data:image/png;base64,${g.hbar}" style="width:100%"></div>
+    </div>
+    <div style="background:white;padding:10px;border-radius:12px;margin-top:15px"><img src="data:image/png;base64,${g.line}" style="width:100%"></div>
+  `;
+}
+</script>
+</body>
+</html>
